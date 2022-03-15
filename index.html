@@ -13,9 +13,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- JavaScript -->
+    <script src = "main.js" defer ></script>
+    <script src="https://kit.fontawesome.com/238576f8e6.js" crossorigin="anonymous"></script>
+
     <title>Azrielle Pelayo</title>
 </head>
 <body>
+    <div class="root">
+        <header class = "rootHeader">
+            <!-- Hamburger Menu Icon-->
+            <div class="cmp-burgerIconContainer">
+                <div class="cmp-burgerIconContainer__icon"></div>
+            </div>
+
+            <nav class="navContainer">
+                <button>Toggle</button>
+                <ul class="navContainer__linkList">
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#about-me">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="navContainer__externalLinks">
+                    <a href="https://github.com/Aze-Pelayo" target="_blank">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    
+                </div>
+
+            </nav>
+        </header>
+
+        <main>
+            <section class = "landingPage">
+                <!-- Landing Page-->
+                <h1 class = "landingPage__header">
+                    Hi, my name's <span class = "landingPage__header--highlight">Azrielle Pelayo</span>
+                </h1>
+                <p class = "landingPage__subtitle">A <span class = "landingPage__subtitle--highlight">Frontend Developer<span> from the Philippines</p>
+                <button class = "cmp-cta">
+                    View My Projects
+                </button>
+            </section>
+        </main>
+    </div>
     
 </body>
 </html>
