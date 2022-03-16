@@ -50,6 +50,7 @@
   transform: rotate(45deg);
 }
 
+/* == CTA == */
 .cmp-cta {
   width: fit-content;
   margin: 1.5em 0;
@@ -60,6 +61,40 @@
   background: none;
   font: 18px "Inconsolata", sans-serif;
   color: #018192;
+}
+
+/* == External Links == */
+.cmp-externalLinks a {
+  text-decoration: none;
+  margin: 0.2em;
+}
+.cmp-externalLinks a i {
+  color: #018192;
+}
+.cmp-externalLinks.nav {
+  text-align: center;
+}
+.cmp-externalLinks.nav a > i {
+  color: #FFFEFA;
+}
+
+/* == Header == */
+.cmp-h2 {
+  width: 100%;
+  margin: 3em 0 2em 0;
+  overflow: hidden;
+  font: bold 24px "Ubuntu", sans-serif;
+}
+.cmp-h2::after {
+  display: inline-block;
+  height: 0.5em;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: -100%;
+  z-index: -1;
+  vertical-align: bottom;
+  content: "";
+  border-top: 0.5px solid #018192;
 }
 
 /* Global */
@@ -123,16 +158,9 @@ body {
   text-decoration: none;
   color: #FFFEFA;
 }
-.rootHeader .navContainer__externalLinks {
-  text-align: center;
-}
-.rootHeader .navContainer__externalLinks a {
-  text-decoration: none;
-  margin: 0.2em;
-  text-align: center;
-}
-.rootHeader .navContainer__externalLinks a i {
-  color: #FFFEFA;
+
+main {
+  padding: 0 2em;
 }
 
 /* Landing Page */
@@ -141,7 +169,6 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding: 0 2em;
 }
 .landingPage__header {
   font: bold 36px "Ubuntu", sans-serif;
@@ -167,6 +194,11 @@ body {
   border-style: solid;
   border-radius: 10px;
   color: rgba(1, 129, 146, 0.3);
+}
+
+/* Featured Projects */
+.featuredProject {
+  margin: 2em 0;
 }
 
 /*# sourceMappingURL=style.css.map */
