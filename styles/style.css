@@ -276,6 +276,12 @@ main {
   font: bold clamp(20px, 7vw, 24px) "Ubuntu", sans-serif;
   color: #64829A;
 }
+.featuredProject__imgContainer img {
+  max-width: 100%;
+  border-radius: 10px;
+  opacity: 80%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .featuredProject__projectDesc {
   margin: 1em 0;
   font: 18px "Ubuntu", sans-serif;
@@ -399,6 +405,25 @@ main {
     flex-basis: 50%;
     margin: 1em 0 0 1em;
     justify-items: flex-end;
+  }
+}
+@media screen and (min-width: 910px) {
+  .featuredProject__projectContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10% 1fr;
+  }
+  .featuredProject__projectName {
+    margin: 0;
+    grid-area: 1/1/2/2;
+    align-self: center;
+  }
+  .featuredProject__imgContainer {
+    margin-left: 1.5em;
+    grid-area: 1/2/3/3;
+  }
+  .featuredProject__infoContainer {
+    grid-area: 2/1/3/2;
   }
 }
 @media screen and (min-width: 1024px) {
