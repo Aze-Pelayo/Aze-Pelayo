@@ -74,6 +74,7 @@
     border: 1px solid $blue-green;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
     background: none;
     font: 18px $mono;
     color: $blue-green;
@@ -104,6 +105,10 @@
     &.contactMe {
         text-align: center;
     }
+
+    &.fixed {
+        display: none;
+    }
 }
 
 /* == Header == */ 
@@ -131,5 +136,38 @@
         font: bold 24px $header;
         text-align: center;
         color: $blue-grey;
+    }
+}
+
+/* == Media Queries == */
+@media screen and (min-width:820px) {
+    .cmp-burgerIconContainer {
+        display: none;
+    }
+
+    .cmp-externalLinks.nav {
+        display: none;
+    }
+
+    .cmp-externalLinks.fixed {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 0;
+        right: 2em;
+
+        &::after {
+            display: inline-block;
+            height: 10.5em;
+            width: 100%;
+            margin: 0 0 0 -1.2em;
+            z-index: -1;
+            content: "";
+            border-right: 0.5px solid $blue-green;
+        }
+
+        a {
+            margin-bottom: 1em
+        }
     }
 }
