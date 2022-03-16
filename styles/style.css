@@ -94,13 +94,13 @@
   width: 100%;
   margin: 3em 0 2em 0;
   overflow: hidden;
-  font: bold 24px "Ubuntu", sans-serif;
+  font: bold clamp(24px, 7vw, 32px) "Ubuntu", sans-serif;
 }
 .cmp-h2::after {
   display: inline-block;
   height: 0.5em;
   width: 100%;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: -100%;
   z-index: -1;
   vertical-align: bottom;
@@ -109,7 +109,7 @@
 }
 .cmp-h2--contact {
   margin: 3em 0 2em 0;
-  font: bold 24px "Ubuntu", sans-serif;
+  font: bold clamp(24px, 7vw, 32px) "Ubuntu", sans-serif;
   text-align: center;
   color: #64829A;
 }
@@ -120,14 +120,16 @@
     display: none;
   }
 
+  .cmp-h2::after {
+    width: 30%;
+  }
+
   .cmp-externalLinks.nav {
     display: none;
   }
-
   .cmp-externalLinks.contactMe {
     display: none;
   }
-
   .cmp-externalLinks.fixed {
     display: flex;
     flex-direction: column;
@@ -222,7 +224,7 @@ main {
   height: 100vh;
 }
 .landingPage__header {
-  font: bold 36px "Ubuntu", sans-serif;
+  font: bold clamp(36px, 7vw, 72px) "Ubuntu", sans-serif;
   color: #64829A;
 }
 .landingPage__header--highlight {
@@ -230,7 +232,7 @@ main {
 }
 .landingPage__subtitle {
   margin: 1em 0;
-  font: 20px "Ubuntu", sans-serif;
+  font: 18px "Ubuntu", sans-serif;
 }
 .landingPage__subtitle--highlight {
   position: relative;
@@ -266,12 +268,9 @@ main {
 .featuredProject__projectContainer {
   padding: 1em 0;
 }
-.featuredProject__projectContainer:not(:last-child) {
-  border-bottom: 0.5px solid #64829A;
-}
 .featuredProject__projectName {
   margin: 2em 0 1em 0;
-  font: bold 20px "Ubuntu", sans-serif;
+  font: bold clamp(20px, 7vw, 24px) "Ubuntu", sans-serif;
   color: #64829A;
 }
 .featuredProject__projectDesc {
@@ -396,6 +395,15 @@ main {
   .about__skillsContainer {
     flex-basis: 50%;
     margin: 1em 0 0 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 0 10em;
+  }
+
+  .about__skillsContainer {
+    margin-left: 2em;
   }
 }
 

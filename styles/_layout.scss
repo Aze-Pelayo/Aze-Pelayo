@@ -78,7 +78,7 @@ main {
     height: 100vh;
 
     &__header {
-        font: bold 36px $header;
+        font: bold $h1 $header;
         color: $blue-grey;
 
         &--highlight {
@@ -88,7 +88,7 @@ main {
 
     &__subtitle {
         margin: 1em 0;
-        font: 20px $body;
+        font: $base $body;
 
         &--highlight {
             position: relative;
@@ -129,13 +129,9 @@ main {
         padding: 1em 0;
     }
 
-    &__projectContainer:not(:last-child) {
-        border-bottom: 0.5px solid $blue-grey;
-    }
-
     &__projectName {
         margin: 2em 0 1em 0;
-        font: bold 20px $header;
+        font: bold $h3 $header;
         color: $blue-grey;
     }
 
@@ -284,4 +280,16 @@ main {
         }
     }
     
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        padding: 0 10em;
+    }
+
+    .about {
+        &__skillsContainer {
+            margin-left: 2em;
+        }
+    }
 }

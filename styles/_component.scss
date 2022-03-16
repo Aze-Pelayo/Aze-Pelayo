@@ -116,13 +116,13 @@
     width: 100%;
     margin: 3em 0 2em 0;
     overflow: hidden;
-    font: bold 24px $header;
+    font: bold $h2 $header;
 
     &::after {
         display: inline-block;
         height: 0.5em;
         width: 100%;
-        margin-left: 5px;
+        margin-left: 10px;
         margin-right: -100%;
         z-index: -1;
         vertical-align: bottom;
@@ -133,7 +133,7 @@
 
     &--contact {
         margin: 3em 0 2em 0;
-        font: bold 24px $header;
+        font: bold $h2 $header;
         text-align: center;
         color: $blue-grey;
     }
@@ -145,33 +145,42 @@
         display: none;
     }
 
-    .cmp-externalLinks.nav {
-        display: none;
-    }
-
-    .cmp-externalLinks.contactMe {
-        display: none;
-    }
-
-    .cmp-externalLinks.fixed {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        bottom: 0;
-        right: 2em;
-
+    .cmp-h2 {
         &::after {
-            display: inline-block;
-            height: 10.5em;
-            width: 100%;
-            margin: 0 0 0 -1.2em;
-            z-index: -1;
-            content: "";
-            border-right: 0.5px solid $blue-green;
-        }
-
-        a {
-            margin-bottom: 1em
+            width: 30%;
         }
     }
+
+    .cmp-externalLinks{
+        &.nav {
+            display: none;
+        }
+
+        &.contactMe {
+            display: none;
+        }
+
+        &.fixed {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            bottom: 0;
+            right: 2em;
+    
+            &::after {
+                display: inline-block;
+                height: 10.5em;
+                width: 100%;
+                margin: 0 0 0 -1.2em;
+                z-index: -1;
+                content: "";
+                border-right: 0.5px solid $blue-green;
+            }
+    
+            a {
+                margin-bottom: 1em
+            }
+        }
+    }
+
 }
