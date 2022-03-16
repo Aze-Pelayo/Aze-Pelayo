@@ -53,8 +53,8 @@
 /* == CTA == */
 .cmp-cta {
   width: fit-content;
-  margin: 1.5em 0;
-  padding: 1em 0.5em;
+  margin: 2em 0;
+  padding: 0.75em 0.5em;
   border: 1px solid #018192;
   border-radius: 5px;
   cursor: pointer;
@@ -80,6 +80,9 @@
 .cmp-externalLinks.featuredProject {
   text-align: right;
 }
+.cmp-externalLinks.contactMe {
+  text-align: center;
+}
 
 /* == Header == */
 .cmp-h2 {
@@ -98,6 +101,12 @@
   vertical-align: bottom;
   content: "";
   border-top: 0.5px solid #018192;
+}
+.cmp-h2--contact {
+  margin: 3em 0 2em 0;
+  font: bold 24px "Ubuntu", sans-serif;
+  text-align: center;
+  color: #64829A;
 }
 
 /* Global */
@@ -254,6 +263,27 @@ main {
 }
 .about__skills {
   margin: 1em 0 0 1em;
+}
+
+/* Contact */
+.contact {
+  display: grid;
+  grid-template-rows: 85% 15%;
+  height: 90vh;
+  place-items: center;
+  text-align: center;
+}
+.contact__subtitle {
+  margin-bottom: 1em;
+  font: 18px "Ubuntu", sans-serif;
+}
+.contact__footer {
+  display: block;
+}
+.contact__footerText {
+  margin: 1em 0;
+  font: 12px "Inconsolata", sans-serif;
+  color: #64829A;
 }
 
 /*# sourceMappingURL=style.css.map */

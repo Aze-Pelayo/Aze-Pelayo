@@ -69,8 +69,8 @@
 /* == CTA == */
 .cmp-cta {
     width: fit-content;
-    margin: 1.5em 0;
-    padding: 1em 0.5em;
+    margin: 2em 0;
+    padding: 0.75em 0.5em;
     border: 1px solid $blue-green;
     border-radius: 5px;
     cursor: pointer;
@@ -99,6 +99,10 @@
     &.featuredProject {
         text-align: right;
     }
+
+    &.contactMe {
+        text-align: center;
+    }
 }
 
 /* == Header == */ 
@@ -119,5 +123,12 @@
         content: "";
         border-top: 0.5px solid $blue-green;
 
+    }
+
+    &--contact {
+        margin: 3em 0 2em 0;
+        font: bold 24px $header;
+        text-align: center;
+        color: $blue-grey;
     }
 }
