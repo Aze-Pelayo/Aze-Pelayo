@@ -77,6 +77,9 @@
 .cmp-externalLinks.nav a > i {
   color: #FFFEFA;
 }
+.cmp-externalLinks.featuredProject {
+  text-align: right;
+}
 
 /* == Header == */
 .cmp-h2 {
@@ -199,6 +202,58 @@ main {
 /* Featured Projects */
 .featuredProject {
   margin: 2em 0;
+}
+.featuredProject__projectContainer:not(:last-child) {
+  border-bottom: 0.5px solid #64829A;
+}
+.featuredProject__projectName {
+  margin: 2em 0 1em 0;
+  font: bold 20px "Ubuntu", sans-serif;
+  color: #64829A;
+}
+.featuredProject__projectDesc {
+  margin: 1em 0;
+  font: 18px "Ubuntu", sans-serif;
+  color: #001528;
+}
+.featuredProject__tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.featuredProject__tag {
+  list-style-type: none;
+  margin: 0.5em 0.5em 0.2em 0;
+  padding: 0.25em 0.5em;
+  border: 1px solid #64829A;
+  border-radius: 5px;
+  font: 18px "Inconsolata", sans-serif;
+  color: #64829A;
+}
+
+/* About Me */
+.about {
+  margin: 2em 0;
+}
+.about__bio {
+  font: 18px "Ubuntu", sans-serif;
+  color: #001528;
+}
+.about__bio p {
+  margin: 1em 0;
+}
+.about__bio--highlight {
+  color: #018192;
+}
+.about__skillsContainer {
+  margin: 1.5em 0;
+  font: 18px "Inconsolata", sans-serif;
+  color: #64829A;
+}
+.about__title {
+  font-weight: bold;
+}
+.about__skills {
+  margin: 1em 0 0 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

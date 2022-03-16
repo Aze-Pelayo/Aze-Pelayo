@@ -112,5 +112,68 @@ main {
 .featuredProject {
     margin: 2em 0;
 
-    
+    &__projectContainer:not(:last-child) {
+        border-bottom: 0.5px solid $blue-grey;
+    }
+
+    &__projectName {
+        margin: 2em 0 1em 0;
+        font: bold 20px $header;
+        color: $blue-grey;
+    }
+
+    &__projectDesc {
+        margin: 1em 0;
+        font: 18px $body;
+        color: $black;
+    }
+
+    &__tagContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__tag {
+        list-style-type: none;
+        margin: 0.5em 0.5em 0.2em 0;
+        padding: 0.25em 0.5em;
+        border: 1px solid $blue-grey;
+        border-radius: 5px;
+        font: 18px $mono;
+        color: $blue-grey;
+    }
+}
+
+/* About Me */
+.about {
+    margin: 2em 0;
+
+    &__bio {
+        font: 18px $body;
+        color: $black;
+
+        p {
+            margin: 1em 0;
+        }
+
+        &--highlight {
+            color: $blue-green;
+        }
+    }
+
+    &__skillsContainer {
+        margin: 1.5em 0;
+        font: 18px $mono;
+        color: $blue-grey;
+    }
+
+    &__title {
+        font-weight: bold;
+    }
+
+    &__skills {
+        margin: 1em 0 0 1em;
+    }
+
+
 }

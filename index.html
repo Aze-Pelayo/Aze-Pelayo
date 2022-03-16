@@ -54,8 +54,8 @@
         </header>
 
         <main>
+            <!-- Landing Page-->
             <section class = "landingPage">
-                <!-- Landing Page-->
                 <h1 class = "landingPage__header">
                     Hi, my name's <span class = "landingPage__header--highlight">Azrielle Pelayo</span>
                 </h1>
@@ -65,6 +65,7 @@
                 </button>
             </section>
 
+            <!-- Featured Projects -->
             <section id = "featuredProjects" class = "featuredProject">
                 <h2 class="cmp-h2">
                     Featured Projects
@@ -74,16 +75,14 @@
                     <div class="featuredProject__imgContainer"></div>
                     <div class="featuredProject__infoContainer">
                         <p class="featuredProject__projectDesc">A finance tracker heavily inspired from the Money Manager app by RealBytes Inc. Currently in-progress for Firebase integration.</p>
-                        <div class="featuredProject__projectTags">
-                            <ul class="cmp-projectTags">
-                                <li class = "cmp-projectTags__tag">
-                                    ReactJS
-                                </li>
-                                <li class="cmp-projectTags__tag">
-                                    Styled Components
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="featuredProject__tagContainer">
+                            <li class = "featuredProject__tag">
+                                ReactJS
+                            </li>
+                            <li class="featuredProject__tag">
+                                Styled Components
+                            </li>
+                        </ul>
                         <div class="cmp-externalLinks featuredProject">
                             <a href="https://github.com/Aze-Pelayo/finance-tracker" target="_blank">
                                 <i class="fab fa-github fa-2x"></i>
@@ -99,19 +98,19 @@
                     <div class="featuredProject__imgContainer"></div>
                     <div class="featuredProject__infoContainer">
                         <p class="featuredProject__projectDesc">A trivia quiz application. The user can choose which category and difficulty he wants to take and he should answer all questions within the time limit. Answers will be shown in the end when the user is down or when the time runs out..</p>
-                        <div class="featuredProject__projectTags">
-                            <ul class="cmp-projectTags">
-                                <li class = "cmp-projectTags__tag">
-                                    ReactJS
-                                </li>
-                                <li class="cmp-projectTags__tag">
-                                    Open Trivia DB API
-                                </li>
-                                <li class="cmp-projectTags__tag">
-                                    localStorage
-                                </li>
-                            </ul>
-                        </div>
+
+                        <ul class="featuredProject__tagContainer">
+                            <li class = "featuredProject__tag">
+                                ReactJS
+                            </li>
+                            <li class="featuredProject__tag">
+                                Open Trivia DB API
+                            </li>
+                            <li class="featuredProject__tag">
+                                localStorage
+                            </li>
+                        </ul>
+            
                         <div class="cmp-externalLinks featuredProject">
                             <a href="https://github.com/Aze-Pelayo/quizzap" target="_blank">
                                 <i class="fab fa-github fa-2x"></i>
@@ -120,6 +119,46 @@
                                 <i class="fab fa-solid fa-arrow-up-right-from-square fa-2x"></i>
                             </a>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me -->
+            <section id="about-me" class="about">
+                <h2 class="cmp-h2">
+                    About Me
+                </h2>
+                <div class="about__container">
+                    <div class="about__bio">
+                        <p>
+                            Hi! I’m <span class ="about__bio--highlight">Azrielle Pelayo</span>. I’m a self-taught front-end web developer based in Baguio City, Philippines. 
+                        </p>
+                        <p>
+                            I graduated as an Electronics Engineer, but I found out that web development is my calling. I love creating websites and web applications since it is an intersection of both art and tech. 
+                        </p>
+                        <p>
+                            My goal is to build performant products that give people a good experience regardless of the device they're using.
+                        </p>
+                    </div>
+                    <div class="about__skillsContainer">
+                        <p class="about__title">Skills</p>
+                        <ul class="about__skillsList">
+                            <li class = "about__skills">
+                                HTML, CSS, Sass, JavaScript
+                            </li>
+                            <li class="about__skills">
+                                ReactJS, TypeScript, Styled Components, Angular
+                            </li>
+                            <li class="about__skills">
+                                StencilJS, Jest, Handlebars
+                            </li>
+                            <li class="about__skills">
+                                Web Accessibility, Git, Figma, SQL
+                            </li>
+                            <li class="about__skills">
+                                AEM, AWS, Shopify
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
