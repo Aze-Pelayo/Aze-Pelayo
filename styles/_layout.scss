@@ -1,11 +1,10 @@
 /* Global */
 * {
-    /* Ensure that all elements are sized in an intuitive way */
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -50,7 +49,7 @@ body {
         }
 
         &__linkList {
-            margin: 2em;
+            margin: 3em 2em;
             list-style-type: none;
             text-align: center;
 
@@ -69,7 +68,7 @@ body {
 main {
     padding: 0 2em;
 }
-  
+
 /* Landing Page */
 .landingPage {
     display: flex;
@@ -112,6 +111,19 @@ main {
 .featuredProject {
     margin: 2em 0;
 
+    // Solve offset issue when clicking anchor link on nav
+    position: relative; 
+	border-top: 30px solid $cream-white; 
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip: padding; 
+	background-clip: padding-box;
+
+    &:before {
+        content: ""; 
+        position: absolute; 
+        top: -2px; left: 0; right: 0;
+    }
+
     &__projectContainer:not(:last-child) {
         border-bottom: 0.5px solid $blue-grey;
     }
@@ -147,6 +159,19 @@ main {
 /* About Me */
 .about {
     margin: 2em 0;
+
+    // Solve offset issue when clicking anchor link on nav
+    position: relative; 
+    border-top: 30px solid $cream-white; 
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip: padding; 
+    background-clip: padding-box;
+
+    &:before {
+        content: ""; 
+        position: absolute; 
+        top: -2px; left: 0; right: 0;
+    }
 
     &__bio {
         font: $base $body;
@@ -184,7 +209,7 @@ main {
     place-items: center;
     text-align: center;
 
-    &__subtitle{
+    &__subtitle {
         margin-bottom: 1em;
         font: $base $body;
     }
@@ -198,5 +223,4 @@ main {
         font: $small $mono;
         color: $blue-grey;
     }
-
 }

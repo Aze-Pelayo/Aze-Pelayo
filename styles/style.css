@@ -77,7 +77,8 @@
 .cmp-externalLinks.nav a > i {
   color: #FFFEFA;
 }
-.cmp-externalLinks.featuredProject {
+.cmp-externalLinks.projects {
+  margin: 2em 0;
   text-align: right;
 }
 .cmp-externalLinks.contactMe {
@@ -111,7 +112,6 @@
 
 /* Global */
 * {
-  /* Ensure that all elements are sized in an intuitive way */
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -158,7 +158,7 @@ body {
   top: 0vw;
 }
 .rootHeader .navContainer__linkList {
-  margin: 2em;
+  margin: 3em 2em;
   list-style-type: none;
   text-align: center;
 }
@@ -211,6 +211,18 @@ main {
 /* Featured Projects */
 .featuredProject {
   margin: 2em 0;
+  position: relative;
+  border-top: 30px solid #FFFEFA;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.featuredProject:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
 }
 .featuredProject__projectContainer:not(:last-child) {
   border-bottom: 0.5px solid #64829A;
@@ -242,6 +254,18 @@ main {
 /* About Me */
 .about {
   margin: 2em 0;
+  position: relative;
+  border-top: 30px solid #FFFEFA;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.about:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
 }
 .about__bio {
   font: 18px "Ubuntu", sans-serif;
