@@ -57,7 +57,7 @@ body {
             li {
                 margin: 2em 0;
                 a {
-                    font: 18px $mono;
+                    font: $base $mono;
                     text-decoration: none;
                     color: $cream-white;
                 }
@@ -124,7 +124,7 @@ main {
 
     &__projectDesc {
         margin: 1em 0;
-        font: 18px $body;
+        font: $base $body;
         color: $black;
     }
 
@@ -139,7 +139,7 @@ main {
         padding: 0.25em 0.5em;
         border: 1px solid $blue-grey;
         border-radius: 5px;
-        font: 18px $mono;
+        font: $base $mono;
         color: $blue-grey;
     }
 }
@@ -149,7 +149,7 @@ main {
     margin: 2em 0;
 
     &__bio {
-        font: 18px $body;
+        font: $base $body;
         color: $black;
 
         p {
@@ -163,7 +163,7 @@ main {
 
     &__skillsContainer {
         margin: 1.5em 0;
-        font: 18px $mono;
+        font: $base $mono;
         color: $blue-grey;
     }
 
@@ -186,7 +186,7 @@ main {
 
     &__subtitle{
         margin-bottom: 1em;
-        font: 18px $body;
+        font: $base $body;
     }
 
     &__footer {
@@ -195,7 +195,7 @@ main {
 
     &__footerText {
         margin: 1em 0;
-        font: 12px $mono;
+        font: $small $mono;
         color: $blue-grey;
     }
 
