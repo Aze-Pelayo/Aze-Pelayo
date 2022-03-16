@@ -124,6 +124,10 @@
     display: none;
   }
 
+  .cmp-externalLinks.contactMe {
+    display: none;
+  }
+
   .cmp-externalLinks.fixed {
     display: flex;
     flex-direction: column;
@@ -331,8 +335,8 @@ main {
 .contact {
   display: grid;
   grid-template-rows: 90% 10%;
-  height: 90vh;
   margin: 2em;
+  height: 40em;
   place-items: center;
   text-align: center;
 }
@@ -381,6 +385,17 @@ main {
 
   .contact {
     grid-template-rows: 95% 5%;
+  }
+
+  .about__container {
+    display: flex;
+  }
+  .about__bio {
+    flex-basis: 50%;
+  }
+  .about__skillsContainer {
+    flex-basis: 50%;
+    margin: 1em 0 0 1em;
   }
 }
 
