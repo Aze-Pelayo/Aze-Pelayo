@@ -10,6 +10,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: $cream-white;
 }
 
 /* Header */
@@ -68,6 +69,8 @@ body {
 
 main {
     padding: 0 2em;
+    margin: auto;
+    max-width: 1600px;
 }
 
 /* Landing Page */
@@ -277,6 +280,7 @@ main {
         &__skillsContainer {
             flex-basis: 50%;
             margin: 1em 0 0 1em;
+            justify-items: flex-end;
         }
     }
     
@@ -289,7 +293,7 @@ main {
 
     .about {
         &__skillsContainer {
-            margin-left: 2em;
+            margin-left: 3em;
         }
     }
 }

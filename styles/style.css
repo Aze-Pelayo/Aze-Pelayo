@@ -80,7 +80,6 @@
 }
 .cmp-externalLinks.projects {
   margin: 2em 0;
-  text-align: right;
 }
 .cmp-externalLinks.contactMe {
   text-align: center;
@@ -162,6 +161,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #FFFEFA;
 }
 
 /* Header */
@@ -214,6 +214,8 @@ body {
 
 main {
   padding: 0 2em;
+  margin: auto;
+  max-width: 1600px;
 }
 
 /* Landing Page */
@@ -395,6 +397,7 @@ main {
   .about__skillsContainer {
     flex-basis: 50%;
     margin: 1em 0 0 1em;
+    justify-items: flex-end;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -403,7 +406,7 @@ main {
   }
 
   .about__skillsContainer {
-    margin-left: 2em;
+    margin-left: 3em;
   }
 }
 
