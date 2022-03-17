@@ -10,7 +10,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: $cream-white;
+    background-color: var(--background);
 }
 
 /* Header */
@@ -25,7 +25,7 @@ body {
     height: 4em;
     width: 100vw;
     padding: 2em 2em 0 0;
-    background-color: $cream-white;
+    background-color: var(--background);
 }
 
 /* Nav */
@@ -36,7 +36,7 @@ body {
     padding: 2em;
     width: 100vw;
     z-index: 2;
-    background-color: $blue-green;
+    background-color: var(--cta);
 
     -webkit-transition: top 0.6s ease;
     -moz-transition: top 0.6s ease;
@@ -85,13 +85,14 @@ main {
         color: $blue-grey;
 
         &--highlight {
-            color: $black;
+            color: var(--font-color);
         }
     }
 
     &__subtitle {
         margin: 1em 0;
         font: $base $body;
+        color: var(--font-color);
 
         &--highlight {
             position: relative;
@@ -106,7 +107,7 @@ main {
             border-width: 6px;
             border-style: solid;
             border-radius: 10px;
-            color: $blue-green-washed;
+            color: var(--cta-washed);
         }
     }
 }
@@ -117,7 +118,7 @@ main {
 
     // Solve offset issue when clicking anchor link on nav
     position: relative; 
-	border-top: 30px solid $cream-white; 
+	border-top: 30px solid var(--background); 
 	-webkit-background-clip: padding-box; 
 	-moz-background-clip: padding; 
 	background-clip: padding-box;
@@ -126,6 +127,7 @@ main {
         content: ""; 
         position: absolute; 
         top: -2px; left: 0; right: 0;
+        background-color: (--background);
     }
 
     &__projectContainer {
@@ -148,7 +150,7 @@ main {
     &__projectDesc {
         margin: 1em 0;
         font: $base $body;
-        color: $black;
+        color: var(--font-color);
     }
 
     &__tagContainer {
@@ -173,7 +175,7 @@ main {
 
     // Solve offset issue when clicking anchor link on nav
     position: relative; 
-    border-top: 30px solid $cream-white; 
+    border-top: 30px solid var(--background); 
     -webkit-background-clip: padding-box; 
     -moz-background-clip: padding; 
     background-clip: padding-box;
@@ -186,14 +188,14 @@ main {
 
     &__bio {
         font: $base $body;
-        color: $black;
+        color: var(--font-color);
 
         p {
             margin: 1em 0;
         }
 
         &--highlight {
-            color: $blue-green;
+            color: var(--cta);
         }
     }
 
@@ -224,6 +226,7 @@ main {
     &__subtitle {
         margin-bottom: 1em;
         font: $base $body;
+        color: var(--font-color)
     }
 
     &__footer {
@@ -252,8 +255,8 @@ main {
     .navContainer {
         top: 0;
         padding: 2em 4em;
-        background-color: $cream-white;
         filter: none;
+        background-color: var(--background);
 
         &__linkList {
             display: flex;
@@ -265,7 +268,7 @@ main {
                 margin: 0 0 0 2em;
 
                 a {
-                    color: $blue-green;
+                    color: var(--cta);
                 }
             }
         }

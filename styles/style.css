@@ -1,4 +1,18 @@
 /* === Variables === */
+:root {
+  --font-color: #001528;
+  --background: #FFFEFA;
+  --cta: #018192;
+  --cta-washed: rgba(1, 129, 146, 0.3);
+}
+
+.darkMode {
+  --font-color: #CBCBCB;
+  --background: #001528;
+  --cta: #27bdd1;
+  --cta-washed: rgba(39, 189, 209, 0.3);
+}
+
 /* == Burger Icon == */
 .cmp-burgerIconContainer {
   display: flex;
@@ -13,7 +27,7 @@
 .cmp-burgerIconContainer__icon, .cmp-burgerIconContainer__icon:before, .cmp-burgerIconContainer__icon:after {
   width: 100%;
   height: 3px;
-  background-color: #018192;
+  background-color: var(--cta);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -62,7 +76,7 @@
   text-decoration: none;
   background: none;
   font: 18px "Inconsolata", sans-serif;
-  color: #018192;
+  color: var(--cta);
 }
 
 /* == External Links == */
@@ -71,7 +85,7 @@
   margin: 0.2em;
 }
 .cmp-externalLinks a i {
-  color: #018192;
+  color: var(--cta);
 }
 .cmp-externalLinks.nav {
   text-align: center;
@@ -95,6 +109,7 @@
   margin: 3em 0 2em 0;
   overflow: hidden;
   font: bold clamp(24px, 7vw, 32px) "Ubuntu", sans-serif;
+  color: var(--font-color);
 }
 .cmp-h2::after {
   display: inline-block;
@@ -162,7 +177,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFFEFA;
+  background-color: var(--background);
 }
 
 /* Header */
@@ -177,7 +192,7 @@ body {
   height: 4em;
   width: 100vw;
   padding: 2em 2em 0 0;
-  background-color: #FFFEFA;
+  background-color: var(--background);
 }
 
 /* Nav */
@@ -188,7 +203,7 @@ body {
   padding: 2em;
   width: 100vw;
   z-index: 2;
-  background-color: #018192;
+  background-color: var(--cta);
   -webkit-transition: top 0.6s ease;
   -moz-transition: top 0.6s ease;
   -ms-transition: top 0.6s ease;
@@ -231,11 +246,12 @@ main {
   color: #64829A;
 }
 .landingPage__header--highlight {
-  color: #001528;
+  color: var(--font-color);
 }
 .landingPage__subtitle {
   margin: 1em 0;
   font: 18px "Ubuntu", sans-serif;
+  color: var(--font-color);
 }
 .landingPage__subtitle--highlight {
   position: relative;
@@ -249,14 +265,14 @@ main {
   border-width: 6px;
   border-style: solid;
   border-radius: 10px;
-  color: rgba(1, 129, 146, 0.3);
+  color: var(--cta-washed);
 }
 
 /* Featured Projects */
 .featuredProject {
   margin: 2em 0;
   position: relative;
-  border-top: 30px solid #FFFEFA;
+  border-top: 30px solid var(--background);
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -267,6 +283,7 @@ main {
   top: -2px;
   left: 0;
   right: 0;
+  background-color: --background;
 }
 .featuredProject__projectContainer {
   padding: 1em 0;
@@ -285,7 +302,7 @@ main {
 .featuredProject__projectDesc {
   margin: 1em 0;
   font: 18px "Ubuntu", sans-serif;
-  color: #001528;
+  color: var(--font-color);
 }
 .featuredProject__tagContainer {
   display: flex;
@@ -305,7 +322,7 @@ main {
 .about {
   margin: 2em 0;
   position: relative;
-  border-top: 30px solid #FFFEFA;
+  border-top: 30px solid var(--background);
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -319,13 +336,13 @@ main {
 }
 .about__bio {
   font: 18px "Ubuntu", sans-serif;
-  color: #001528;
+  color: var(--font-color);
 }
 .about__bio p {
   margin: 1em 0;
 }
 .about__bio--highlight {
-  color: #018192;
+  color: var(--cta);
 }
 .about__skillsContainer {
   margin: 1.5em 0;
@@ -351,6 +368,7 @@ main {
 .contact__subtitle {
   margin-bottom: 1em;
   font: 18px "Ubuntu", sans-serif;
+  color: var(--font-color);
 }
 .contact__footer {
   display: block;
@@ -375,8 +393,8 @@ main {
   .navContainer {
     top: 0;
     padding: 2em 4em;
-    background-color: #FFFEFA;
     filter: none;
+    background-color: var(--background);
   }
   .navContainer__linkList {
     display: flex;
@@ -388,7 +406,7 @@ main {
     margin: 0 0 0 2em;
   }
   .navContainer__linkList li a {
-    color: #018192;
+    color: var(--cta);
   }
 
   .contact {

@@ -10,3 +10,19 @@ const toggleMenu = (() => {
     })
 
 })();
+
+const toggleDarkMode = () => {
+    const toggler = document.querySelector('.darkModeToggle');
+    toggler.addEventListener('click', () => {
+        toggler.checked ? darkMode() : lightMode();
+
+    })
+};
+
+const darkMode = () => {
+    document.body.classList.add('darkMode');
+}
+
+const lightMode = () => {
+    document.body.classList.remove('darkMode');
+}
