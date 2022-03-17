@@ -1,369 +1,388 @@
-/* Global */
+/* === Global === */
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
     background-color: var(--background);
 }
 
-/* Header */
+/* === Header === */
 .rootHeader {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	height: 4em;
-	width: 100vw;
-	padding: 2em 2em 0 0;
-	background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 4em;
+    width: 100vw;
+    padding: 2em 2em 0 0;
+    background-color: var(--background);
 }
 
 /* Nav */
 .navContainer {
-	position: fixed;
-	top: -60vh;
-	left: 0;
-	padding: 2em;
-	width: 100vw;
-	z-index: 2;
-	background-color: var(--cta);
+    position: fixed;
+    top: -60vh;
+    left: 0;
+    padding: 2em;
+    width: 100vw;
+    z-index: 2;
+    background-color: var(--cta);
 
-	-webkit-transition: top 0.6s ease;
-	-moz-transition: top 0.6s ease;
-	-ms-transition: top 0.6s ease;
-	-o-transition: top 0.6s ease;
-	transition: top 0.6s ease;
+    -webkit-transition: top 0.6s ease;
+    -moz-transition: top 0.6s ease;
+    -ms-transition: top 0.6s ease;
+    -o-transition: top 0.6s ease;
+    transition: top 0.6s ease;
 
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-	&.expanded {
-		top: 0vw;
-	}
+    &.expanded {
+        top: 0vw;
+    }
 
-	&__toggler {
-		position: relative;
+	// Dark Mode Toggler
+    &__toggler {
+        position: relative;
 
-		label {
-			position: absolute;
-			top: 0;
-			left: 0;
-			color: $cream-white;
-			cursor: pointer;
-		}
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
 
-		input[type="checkbox"] {
-			display: none;
-		}
-	}
+        i {
+            color: $cream-white;
 
-	&__linkList {
-		margin: 3em 2em;
-		list-style-type: none;
-		text-align: center;
+            &:hover {
+                opacity: 60%;
+                transition: all 0.5s ease;
+            }
+        }
+    }
 
-		li {
-			margin: 2em 0;
-			a {
-				font: $base $mono;
-				text-decoration: none;
-				color: $cream-white;
-			}
-		}
-	}
+    &__linkList {
+        margin: 3em 2em;
+        list-style-type: none;
+        text-align: center;
+
+        li {
+            margin: 2em 0;
+            a {
+                font: $base $mono;
+                text-decoration: none;
+                color: $cream-white;
+            }
+        }
+    }
 }
 
 main {
-	padding: 0 2em;
-	margin: auto;
-	max-width: 1600px;
+    padding: 0 2em;
+    margin: auto;
+    max-width: 1600px;
 }
 
-/* Landing Page */
+/* === Landing Page === */
 .landingPage {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
 
-	&__header {
-		font: bold $h1 $header;
-		color: $blue-grey;
+    &__header {
+        font: bold $h1 $header;
+        color: var(--font-color-secondary);
 
-		&--highlight {
-			color: var(--font-color);
-		}
-	}
+        &--highlight {
+            color: var(--font-color-main);
+        }
+    }
 
-	&__subtitle {
-		margin: 1em 0;
-		font: $base $body;
-		color: var(--font-color);
+    &__subtitle {
+        margin: 1em 0;
+        font: $base $body;
+        color: var(--font-color-main);
 
-		&--highlight {
-			position: relative;
-		}
+        &--highlight {
+            position: relative;
+        }
 
-		&--highlight::before {
-			position: absolute;
-			width: 8.5em;
-			content: "";
-			z-index: -1;
-			top: 0.65em;
-			border-width: 6px;
-			border-style: solid;
-			border-radius: 10px;
-			color: var(--cta-washed);
-		}
-	}
+        &--highlight::before {
+            position: absolute;
+            width: 8.5em;
+            content: "";
+            z-index: -1;
+            top: 0.65em;
+            border-width: 6px;
+            border-style: solid;
+            border-radius: 10px;
+            color: var(--cta-washed);
+        }
+    }
 }
 
-/* Featured Projects */
+/* === Featured Projects === */
 .featuredProject {
-	margin: 2em 0;
+    margin: 2em 0;
 
-	// Solve offset issue when clicking anchor link on nav
-	position: relative;
-	border-top: 30px solid var(--background);
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
+    // Solve offset issue when clicking anchor link on nav
+    position: relative;
+    border-top: 30px solid var(--background);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
 
-	&:before {
-		content: "";
-		position: absolute;
-		top: -2px;
-		left: 0;
-		right: 0;
-		background-color: (--background);
-	}
+    &:before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 0;
+        right: 0;
+        background-color: (--background);
+    }
 
-	&__projectContainer {
-		padding: 1em 0;
-	}
+    &__projectContainer {
+        padding: 1em 0;
+    }
 
-	&__projectName {
-		margin: 2em 0 1em 0;
-		font: bold $h3 $header;
-		color: $blue-grey;
-	}
+    &__projectName {
+        margin: 2em 0 1em 0;
+        font: bold $h3 $header;
+        color: var(--font-color-secondary);
+    }
 
-	&__imgContainer img {
-		max-width: 100%;
-		border-radius: 10px;
-		opacity: 80%;
-		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	}
+    &__imgContainer img {
+        max-width: 100%;
+        border-radius: 10px;
+        opacity: 70%;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-	&__projectDesc {
-		margin: 1em 0;
-		font: $base $body;
-		color: var(--font-color);
-	}
+        &:hover {
+            opacity: 100%;
+            transition: all 0.5s ease;
+        }
+    }
 
-	&__tagContainer {
-		display: flex;
-		flex-wrap: wrap;
-	}
+    &__projectDesc {
+        margin: 1em 0;
+        font: $base $body;
+        color: var(--font-color-main);
+    }
 
-	&__tag {
-		list-style-type: none;
-		margin: 0.5em 0.5em 0.2em 0;
-		padding: 0.25em 0.5em;
-		border: 1px solid $blue-grey;
-		border-radius: 5px;
-		font: $base $mono;
-		color: $blue-grey;
-	}
+    &__tagContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__tag {
+        list-style-type: none;
+        margin: 0.5em 0.5em 0.2em 0;
+        padding: 0.25em 0.5em;
+        border: 1px solid var(--font-color-secondary);
+        border-radius: 5px;
+        font: $base $mono;
+        color: var(--font-color-secondary);
+    }
 }
 
 /* About Me */
 .about {
-	margin: 2em 0;
+    margin: 2em 0;
 
-	// Solve offset issue when clicking anchor link on nav
-	position: relative;
-	border-top: 30px solid var(--background);
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
+    // Solve offset issue when clicking anchor link on nav
+    position: relative;
+    border-top: 30px solid var(--background);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
 
-	&:before {
-		content: "";
-		position: absolute;
-		top: -2px;
-		left: 0;
-		right: 0;
-	}
+    &:before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 0;
+        right: 0;
+    }
 
-	&__bio {
-		font: $base $body;
-		color: var(--font-color);
+    &__bio {
+        font: $base $body;
+        color: var(--font-color-main);
 
-		p {
-			margin: 1em 0;
-		}
+        p {
+            margin: 1em 0;
+        }
 
-		&--highlight {
-			color: var(--cta);
-		}
-	}
+        &--highlight {
+            color: var(--cta);
+        }
+    }
 
-	&__skillsContainer {
-		margin: 1.5em 0;
-		font: $base $mono;
-		color: $blue-grey;
-	}
+    &__skillsContainer {
+        margin: 1.5em 0;
+        font: $base $mono;
+        color: var(--font-color-secondary);
+    }
 
-	&__title {
-		font-weight: bold;
-	}
+    &__title {
+        font-weight: bold;
+    }
 
-	&__skills {
-		margin: 1em 0 0 1em;
-	}
+    &__skills {
+        margin: 1em 0 0 1em;
+    }
 }
 
-/* Contact */
+/* === Contact === */
 .contact {
-	display: grid;
-	grid-template-rows: 90% 10%;
-	margin: 2em;
-	height: 40em;
-	place-items: center;
-	text-align: center;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    margin: 2em;
+    height: 40em;
+    place-items: center;
+    text-align: center;
 
-	&__subtitle {
-		margin-bottom: 1em;
-		font: $base $body;
-		color: var(--font-color);
-	}
+    &__subtitle {
+        margin-bottom: 1em;
+        font: $base $body;
+        color: var(--font-color-main);
+    }
 
-	&__footer {
-		display: block;
-	}
+    &__footer {
+        display: block;
+    }
 
-	&__footerText {
-		margin: 1em 0;
-		font: $small $mono;
-		color: $blue-grey;
-	}
+    &__footerText {
+        margin: 1em 0;
+        font: $small $mono;
+        color: var(--font-color-secondary);
+    }
 }
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
-	main {
-		padding: 0 7em;
-	}
+    main {
+        padding: 0 7em;
+    }
 }
 
 @media screen and (min-width: 820px) {
-	main {
-		padding: 0 7em;
-	}
+    main {
+        padding: 0 7em;
+    }
 
-	.navContainer {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		top: 0;
-		padding: 2em 4em;
-		filter: none;
-		background-color: var(--background);
+	/* === Header === */
+    .navContainer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        top: 0;
+        padding: 2em 4em;
+        filter: none;
+        background-color: var(--background);
 
-		&__toggler {
-			margin-left: 2em;
-			position: static;
-			order: 3;
+        &__toggler {
+            margin-left: 2em;
+            position: static;
+            order: 3;
 
-			label {
-				position: static;
-			}
+            label {
+                position: static;
+            }
 
-			i {
-				color: var(--cta);
-			}
-		}
+            i {
+                color: var(--cta);
+            }
+        }
 
-		&__linkList {
-			display: flex;
-			justify-content: flex-end;
-			margin: 0;
-			text-align: right;
+        &__linkList {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            text-align: right;
 
-			li {
-				margin: 0 0 0 2em;
+            li {
+                margin: 0 0 0 2em;
 
-				a {
-					color: var(--cta);
-				}
-			}
-		}
-	}
+                a {
+                    color: var(--font-color-secondary);
 
-	.contact {
-		grid-template-rows: 95% 5%;
-	}
+                    &:hover,
+                    &:focus {
+                        color: var(--cta);
+                    }
+                }
+            }
+        }
+    }
 
+	/* === About === */ 
 	.about {
-		&__container {
-			display: flex;
-		}
+        &__container {
+            display: flex;
+        }
 
-		&__bio {
-			flex-basis: 50%;
-		}
+        &__bio {
+            flex-basis: 50%;
+        }
 
-		&__skillsContainer {
-			flex-basis: 50%;
-			margin: 1em 0 0 1em;
-			justify-items: flex-end;
-		}
-	}
+        &__skillsContainer {
+            flex-basis: 50%;
+            margin: 0 0 0 1.5em;
+            justify-items: flex-end;
+        }
+    }
+
+	/* === Contact === */
+    .contact {
+        grid-template-rows: 95% 5%;
+    }
 }
 
 @media screen and (min-width: 910px) {
-	.featuredProject {
-		&__projectContainer {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: 10% 1fr;
-		}
+	/* === Featured Projects === */
+    .featuredProject {
+        &__projectContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 10% 1fr;
+        }
 
-		&__projectName {
-			margin: 0;
-			grid-area: 1/1/2/2;
-			align-self: center;
-		}
+        &__projectName {
+            margin: 0;
+            grid-area: 1/1/2/2;
+            align-self: center;
+        }
 
-		&__imgContainer {
-			margin-left: 1.5em;
-			grid-area: 1/2/3/3;
-		}
+        &__imgContainer {
+            margin-left: 1.5em;
+            grid-area: 1/2/3/3;
+        }
 
-		&__infoContainer {
-			grid-area: 2/1/3/2;
-		}
-	}
+        &__infoContainer {
+            grid-area: 2/1/3/2;
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
-	main {
-		padding: 0 10em;
-	}
+    main {
+        padding: 0 10em;
+    }
 
-	.about {
-		&__skillsContainer {
-			margin-left: 3em;
-		}
-	}
+	/* === About === */
+    .about {
+        &__skillsContainer {
+            margin-left: 3em;
+        }
+    }
 }
