@@ -4,6 +4,7 @@
 $black: #001528;
 $blue-grey: #64829A;
 $cream-white: #FFFEFA;
+$light-grey: #CBCBCB;
 $blue-green: #018192;
 $sky-blue: rgb(39, 189, 209);
 $sky-blue-washed: rgb(39, 189, 209, 0.3);
@@ -14,12 +15,27 @@ $header: 'Ubuntu', sans-serif;
 $body: 'Ubuntu', sans-serif;
 $mono: 'Inconsolata', sans-serif;
 
+// Font Sizes
+$base: 18px;
+$small: 12px;
+$h1: clamp(36px, 7vw, 72px);
+$h2: clamp(24px, 7vw, 32px);
+$h3: clamp(20px, 7vw, 24px);
 
-// Typography
+// Theming
+:root {
+    --font-color: #{$black};
+    --background: #{$cream-white};
+    --cta: #{$blue-green};
+    --cta-washed: #{$blue-green-washed};
+}
 
-
-
-
+.darkMode {
+    --font-color: #{$light-grey};
+    --background: #{$black};
+    --cta: #{$sky-blue};
+    --cta-washed: #{$sky-blue-washed};
+}
 
 
 

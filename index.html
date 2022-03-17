@@ -13,9 +13,208 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- JavaScript -->
+    <script src = "main.js" defer ></script>
+    <script src="https://kit.fontawesome.com/238576f8e6.js" crossorigin="anonymous"></script>
+
     <title>Azrielle Pelayo</title>
 </head>
 <body>
+    <div class="root">
+        <header class = "rootHeader">
+            <!-- Hamburger Menu Icon-->
+            <div class="cmp-burgerIconContainer">
+                <div class="cmp-burgerIconContainer__icon"></div>
+            </div>
+
+            <nav class="navContainer">
+                <div class="navContainer__toggler">
+                    <label for="darkModeToggle">
+                        <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
+                    </label>
+                    <input type = "checkbox" id = "darkModeToggle" class = "darkModeToggle" name = "checkbox" onclick = "toggleDarkMode()"/>
+                </div>
+
+                <ul class="navContainer__linkList">
+                    <li>
+                        <a href="#featuredProjects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#about-me">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="cmp-externalLinks nav">
+                    <a href="https://github.com/Aze-Pelayo" target="_blank">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
+
+            </nav>
+        </header>
+
+        <main>
+            <!-- Landing Page-->
+            <section class = "landingPage">
+                <h1 class = "landingPage__header">
+                    Hi, my name's <br/><span class = "landingPage__header--highlight">Azrielle Pelayo</span>
+                </h1>
+                <p class = "landingPage__subtitle">A <span class = "landingPage__subtitle--highlight">Frontend Developer<span> from the Philippines</p>
+                <a class = "cmp-cta" href = "#featuredProjects">
+                    View My Projects
+                </a>
+            </section>
+
+            <div class="cmp-externalLinks fixed">
+                <a href="https://github.com/Aze-Pelayo" target="_blank">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+
+            <!-- Featured Projects -->
+            <section id = "featuredProjects" class = "featuredProject">
+                <h2 class="cmp-h2">
+                    Featured Projects
+                </h2>
+                <div class="featuredProject__projectContainer leftInfo">
+                    <h3 class="featuredProject__projectName">Finance Tracker</h3>
+                    <div class="featuredProject__imgContainer">
+                        <a href="https://aze-pelayo.github.io/finance-tracker/" target = "_blank">
+                            <img src="./assets/finance-tracker-screenshot-l.png" alt="Picture of Finance Tracker project" id ="withDarkMode">
+                        </a>
+                    </div>
+                    <div class="featuredProject__infoContainer">
+                        <p class="featuredProject__projectDesc">A finance tracker heavily inspired from the Money Manager app by RealBytes Inc. Allows the user to have a birds-eye-view of all of his transactions per month, get an idea where the bulk of his income comes from or where he spends most, and get the total amount of all of his assets and liabilities. Currently in-progress for Firebase integration.</p>
+                        <ul class="featuredProject__tagContainer">
+                            <li class = "featuredProject__tag">
+                                ReactJS
+                            </li>
+                            <li class="featuredProject__tag">
+                                Styled Components
+                            </li>
+                        </ul>
+                        <div class="cmp-externalLinks projects">
+                            <a href="https://github.com/Aze-Pelayo/finance-tracker" target="_blank">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                            <a href="https://aze-pelayo.github.io/finance-tracker/" target="_blank">
+                                <i class="fab fa-solid fa-arrow-up-right-from-square fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="featuredProject__projectContainer rightInfo">
+                    <h3 class="featuredProject__projectName">Quizzap</h3>
+                    <div class="featuredProject__imgContainer">
+                        <a href="https://aze-pelayo.github.io/quizzap/" target = "_blank">
+                            <img src="./assets/quizzap-screenshot.png" alt="Picture of Quizzap project">
+                        </a>
+                    </div>
+                    <div class="featuredProject__infoContainer">
+                        <p class="featuredProject__projectDesc">A trivia quiz application. The user can choose which category and difficulty he wants to take and he should answer all questions within the time limit. Answers will be shown in the end when the user is down or when the time runs out.</p>
+
+                        <ul class="featuredProject__tagContainer">
+                            <li class = "featuredProject__tag">
+                                ReactJS
+                            </li>
+                            <li class="featuredProject__tag">
+                                Open Trivia DB API
+                            </li>
+                            <li class="featuredProject__tag">
+                                localStorage
+                            </li>
+                        </ul>
+            
+                        <div class="cmp-externalLinks projects">
+                            <a href="https://github.com/Aze-Pelayo/quizzap" target="_blank">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                            <a href="https://aze-pelayo.github.io/quizzap/" target="_blank">
+                                <i class="fab fa-solid fa-arrow-up-right-from-square fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me -->
+            <section id="about-me" class="about">
+                <h2 class="cmp-h2">
+                    About Me
+                </h2>
+                <div class="about__container">
+                    <div class="about__bio">
+                        <p>
+                            Hi! I’m <span class ="about__bio--highlight">Azrielle Pelayo</span>. I’m a self-taught front-end web developer based in Baguio City, Philippines. 
+                        </p>
+                        <p>
+                            I graduated as an Electronics Engineer, but I found out that web development is my calling. I love creating websites and web applications since it is an intersection of both art and tech. 
+                        </p>
+                        <p>
+                            My goal is to build performant products that give people a good experience regardless of the device they're using.
+                        </p>
+                    </div>
+                    <div class="about__skillsContainer">
+                        <p class="about__title">Skills</p>
+                        <ul class="about__skillsList">
+                            <li class = "about__skills">
+                                HTML, CSS, Sass, JavaScript
+                            </li>
+                            <li class="about__skills">
+                                ReactJS, TypeScript, Styled Components, Angular
+                            </li>
+                            <li class="about__skills">
+                                StencilJS, Jest, Handlebars
+                            </li>
+                            <li class="about__skills">
+                                Web Accessibility, Git, Figma, SQL
+                            </li>
+                            <li class="about__skills">
+                                AEM, AWS, Shopify
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="contact" class="contact">
+                <div class="contact__contentContainer">
+                    <h2 class="cmp-h2--contact">
+                        Contact Me
+                    </h2>
+                    <p class="contact__subtitle">
+                        Get in touch with me, tell me about your available job opportunities, or just say hi!
+                    </p>
+                    <a class="cmp-cta" href="mailto:azriellepelayo@gmail.com" target = "_blank">
+                        SAY HELLO
+                    </a>
+                </div>
+                <div class="contact__footer">
+                    <div class="cmp-externalLinks contactMe">
+                        <a href="https://github.com/Aze-Pelayo" target="_blank">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </div>
+                    <p class="contact__footerText">
+                        Designed and built by Azrielle Pelayo
+                    </p>
+                </div>
+                
+            </section>
+        </main>
+    </div>
     
 </body>
 </html>
