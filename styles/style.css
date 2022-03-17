@@ -23,6 +23,7 @@
   width: 2.5em;
   z-index: 3;
   padding: 0.2em;
+  cursor: pointer;
 }
 .cmp-burgerIconContainer__icon, .cmp-burgerIconContainer__icon:before, .cmp-burgerIconContainer__icon:after {
   width: 100%;
@@ -78,14 +79,27 @@
   font: 18px "Inconsolata", sans-serif;
   color: var(--cta);
 }
+.cmp-cta:focus, .cmp-cta:hover {
+  background-color: var(--cta);
+  color: #FFFEFA;
+  transition: all 0.5s ease;
+}
+.cmp-cta:active {
+  background-color: var(--cta-washed);
+  transition: all 0.25s ease-in;
+}
 
 /* == External Links == */
 .cmp-externalLinks a {
   text-decoration: none;
-  margin: 0.2em;
+  margin: 0.3em;
 }
 .cmp-externalLinks a i {
   color: var(--cta);
+}
+.cmp-externalLinks a i:hover {
+  opacity: 0.8;
+  transition: all 0.25s ease;
 }
 .cmp-externalLinks.nav {
   text-align: center;
@@ -224,6 +238,10 @@ body {
   color: #FFFEFA;
   cursor: pointer;
 }
+.navContainer__toggler label:hover {
+  opacity: 60%;
+  transition: all 0.5s ease;
+}
 .navContainer__toggler input[type=checkbox] {
   display: none;
 }
@@ -309,8 +327,12 @@ main {
 .featuredProject__imgContainer img {
   max-width: 100%;
   border-radius: 10px;
-  opacity: 80%;
+  opacity: 70%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.featuredProject__imgContainer img:hover {
+  opacity: 100%;
+  transition: all 0.5s ease;
 }
 .featuredProject__projectDesc {
   margin: 1em 0;
@@ -433,6 +455,9 @@ main {
     margin: 0 0 0 2em;
   }
   .navContainer__linkList li a {
+    color: #64829A;
+  }
+  .navContainer__linkList li a:hover, .navContainer__linkList li a:focus {
     color: var(--cta);
   }
 
