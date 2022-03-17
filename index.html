@@ -23,16 +23,17 @@
     <div class="root">
         <header class = "rootHeader">
             <!-- Hamburger Menu Icon-->
-            <div class="cmp-burgerIconContainer">
+            <button class="cmp-burgerIconContainer" aria-label = "Open navigation">
                 <div class="cmp-burgerIconContainer__icon"></div>
-            </div>
+            </button>
 
             <nav class="navContainer">
+
+                <!-- Dark Mode Toggler -->
                 <div class="navContainer__toggler">
-                    <label for="darkModeToggle">
+                    <button class="darkModeToggle" onclick="toggleDarkMode()" aria-label = "Toggle dark mode">
                         <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
-                    </label>
-                    <input type = "checkbox" id = "darkModeToggle" class = "darkModeToggle" name = "checkbox" onclick = "toggleDarkMode()"/>
+                    </button>
                 </div>
 
                 <ul class="navContainer__linkList">
@@ -48,10 +49,10 @@
                 </ul>
                 
                 <div class="cmp-externalLinks nav">
-                    <a href="https://github.com/Aze-Pelayo" target="_blank">
+                    <a href="https://github.com/Aze-Pelayo" target="_blank" aria-label = "Link to GitHub profile.">
                         <i class="fab fa-github fa-2x"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank">
+                    <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank" aria-label = "Link to LinkedIn profile.">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
                 </div>
@@ -72,10 +73,10 @@
             </section>
 
             <div class="cmp-externalLinks fixed">
-                <a href="https://github.com/Aze-Pelayo" target="_blank">
+                <a href="https://github.com/Aze-Pelayo" target="_blank" aria-label = "Link to GitHub profile.">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank">
+                <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank" aria-label = "Link to LinkedIn profile.">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
             </div>
@@ -103,10 +104,10 @@
                             </li>
                         </ul>
                         <div class="cmp-externalLinks projects">
-                            <a href="https://github.com/Aze-Pelayo/finance-tracker" target="_blank">
+                            <a href="https://github.com/Aze-Pelayo/finance-tracker" target="_blank" aria-label = "Link to the GitHub repository of Finance Tracker">
                                 <i class="fab fa-github fa-2x"></i>
                             </a>
-                            <a href="https://aze-pelayo.github.io/finance-tracker/" target="_blank">
+                            <a href="https://aze-pelayo.github.io/finance-tracker/" target="_blank" aria-label = "Link to the live website of Finance Tracker">
                                 <i class="fab fa-solid fa-arrow-up-right-from-square fa-2x"></i>
                             </a>
                         </div>
@@ -135,10 +136,10 @@
                         </ul>
             
                         <div class="cmp-externalLinks projects">
-                            <a href="https://github.com/Aze-Pelayo/quizzap" target="_blank">
+                            <a href="https://github.com/Aze-Pelayo/quizzap" target="_blank" aria-label="Link to the GitHub repository of Quizzap">
                                 <i class="fab fa-github fa-2x"></i>
                             </a>
-                            <a href="https://aze-pelayo.github.io/quizzap/" target="_blank">
+                            <a href="https://aze-pelayo.github.io/quizzap/" target="_blank" aria-label="Link to the live website of Quizzap">
                                 <i class="fab fa-solid fa-arrow-up-right-from-square fa-2x"></i>
                             </a>
                         </div>
@@ -164,7 +165,7 @@
                         </p>
                     </div>
                     <div class="about__skillsContainer">
-                        <p class="about__title">Skills</p>
+                        <h3 class="about__title">Skills</>
                         <ul class="about__skillsList">
                             <li class = "about__skills">
                                 HTML, CSS, Sass, JavaScript
@@ -186,6 +187,7 @@
                 </div>
             </section>
             
+            <!-- Contact Me -->
             <section id="contact" class="contact">
                 <div class="contact__contentContainer">
                     <h2 class="cmp-h2--contact">
@@ -200,10 +202,10 @@
                 </div>
                 <div class="contact__footer">
                     <div class="cmp-externalLinks contactMe">
-                        <a href="https://github.com/Aze-Pelayo" target="_blank">
+                        <a href="https://github.com/Aze-Pelayo" target="_blank" aria-label = "Link to GitHub profile.">
                             <i class="fab fa-github fa-2x"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank">
+                        <a href="https://www.linkedin.com/in/azriellepelayo/" target = "_blank" aria-label = "Link to LinkedIn profile.">
                             <i class="fab fa-linkedin fa-2x"></i>
                         </a>
                     </div>

@@ -4,10 +4,12 @@
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    height: 1.8em;
+    height: 2em;
     width: 2.5em;
     z-index: 3;
     padding: 0.2em;
+    border: none;
+    background: none;
     cursor: pointer;
 
     // Burger Icon
@@ -33,6 +35,7 @@
         position: absolute;
         content: "";
         top: -10px;
+        left: 0;
     }
 
     &__icon:after {
@@ -135,7 +138,7 @@
     margin: 3em 0 2em 0;
     overflow: hidden;
     font: bold $h2 $header;
-    color: var(--font-color);
+    color: var(--font-color-main);
 
     &::after {
         display: inline-block;
@@ -153,22 +156,25 @@
         margin: 3em 0 2em 0;
         font: bold $h2 $header;
         text-align: center;
-        color: $blue-grey;
+        color: var(--font-color-secondary);
     }
 }
 
 /* == Media Queries == */
 @media screen and (min-width: 820px) {
+    /* == Burger Icon == */
     .cmp-burgerIconContainer {
         display: none;
     }
 
+    /* == Header == */
     .cmp-h2 {
         &::after {
             width: 30%;
         }
     }
 
+    /* == External Links == */
     .cmp-externalLinks {
         &.nav {
             display: none;

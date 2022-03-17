@@ -1,13 +1,16 @@
 /* === Variables === */
+/* === Theming === */
 :root {
-  --font-color: #001528;
-  --background: #FFFEFA;
+  --font-color-main: #001528;
+  --font-color-secondary: #4f6e88;
+  --background: #fffefa;
   --cta: #018192;
   --cta-washed: rgba(1, 129, 146, 0.3);
 }
 
 .darkMode {
-  --font-color: #CBCBCB;
+  --font-color-main: #cbcbcb;
+  --font-color-secondary: #64829a;
   --background: #001528;
   --cta: #27bdd1;
   --cta-washed: rgba(39, 189, 209, 0.3);
@@ -19,10 +22,12 @@
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  height: 1.8em;
+  height: 2em;
   width: 2.5em;
   z-index: 3;
   padding: 0.2em;
+  border: none;
+  background: none;
   cursor: pointer;
 }
 .cmp-burgerIconContainer__icon, .cmp-burgerIconContainer__icon:before, .cmp-burgerIconContainer__icon:after {
@@ -42,13 +47,14 @@
   position: absolute;
   content: "";
   top: -10px;
+  left: 0;
 }
 .cmp-burgerIconContainer__icon:after {
   top: 10px;
 }
 .cmp-burgerIconContainer.expanded .cmp-burgerIconContainer__icon, .cmp-burgerIconContainer.expanded .cmp-burgerIconContainer__icon:before, .cmp-burgerIconContainer.expanded .cmp-burgerIconContainer__icon:after {
   top: 0;
-  background-color: #FFFEFA;
+  background-color: #fffefa;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -81,7 +87,7 @@
 }
 .cmp-cta:focus, .cmp-cta:hover {
   background-color: var(--cta);
-  color: #FFFEFA;
+  color: #fffefa;
   transition: all 0.5s ease;
 }
 .cmp-cta:active {
@@ -105,7 +111,7 @@
   text-align: center;
 }
 .cmp-externalLinks.nav a > i {
-  color: #FFFEFA;
+  color: #fffefa;
 }
 .cmp-externalLinks.projects {
   margin: 2em 0;
@@ -123,7 +129,7 @@
   margin: 3em 0 2em 0;
   overflow: hidden;
   font: bold clamp(24px, 7vw, 32px) "Ubuntu", sans-serif;
-  color: var(--font-color);
+  color: var(--font-color-main);
 }
 .cmp-h2::after {
   display: inline-block;
@@ -140,19 +146,22 @@
   margin: 3em 0 2em 0;
   font: bold clamp(24px, 7vw, 32px) "Ubuntu", sans-serif;
   text-align: center;
-  color: #64829A;
+  color: var(--font-color-secondary);
 }
 
 /* == Media Queries == */
 @media screen and (min-width: 820px) {
+  /* == Burger Icon == */
   .cmp-burgerIconContainer {
     display: none;
   }
 
+  /* == Header == */
   .cmp-h2::after {
     width: 30%;
   }
 
+  /* == External Links == */
   .cmp-externalLinks.nav {
     display: none;
   }
@@ -179,7 +188,7 @@
     margin-bottom: 1em;
   }
 }
-/* Global */
+/* === Global === */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -194,7 +203,7 @@ body {
   background-color: var(--background);
 }
 
-/* Header */
+/* === Header === */
 .rootHeader {
   display: flex;
   align-items: center;
@@ -231,19 +240,17 @@ body {
 .navContainer__toggler {
   position: relative;
 }
-.navContainer__toggler label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #FFFEFA;
+.navContainer__toggler button {
+  background: none;
+  border: none;
   cursor: pointer;
 }
-.navContainer__toggler label:hover {
+.navContainer__toggler i {
+  color: #fffefa;
+}
+.navContainer__toggler i:hover {
   opacity: 60%;
   transition: all 0.5s ease;
-}
-.navContainer__toggler input[type=checkbox] {
-  display: none;
 }
 .navContainer__linkList {
   margin: 3em 2em;
@@ -256,7 +263,7 @@ body {
 .navContainer__linkList li a {
   font: 18px "Inconsolata", sans-serif;
   text-decoration: none;
-  color: #FFFEFA;
+  color: #fffefa;
 }
 
 main {
@@ -265,7 +272,7 @@ main {
   max-width: 1600px;
 }
 
-/* Landing Page */
+/* === Landing Page === */
 .landingPage {
   display: flex;
   flex-direction: column;
@@ -274,15 +281,15 @@ main {
 }
 .landingPage__header {
   font: bold clamp(36px, 7vw, 72px) "Ubuntu", sans-serif;
-  color: #64829A;
+  color: var(--font-color-secondary);
 }
 .landingPage__header--highlight {
-  color: var(--font-color);
+  color: var(--font-color-main);
 }
 .landingPage__subtitle {
   margin: 1em 0;
   font: 18px "Ubuntu", sans-serif;
-  color: var(--font-color);
+  color: var(--font-color-main);
 }
 .landingPage__subtitle--highlight {
   position: relative;
@@ -299,7 +306,7 @@ main {
   color: var(--cta-washed);
 }
 
-/* Featured Projects */
+/* === Featured Projects === */
 .featuredProject {
   margin: 2em 0;
   position: relative;
@@ -322,7 +329,7 @@ main {
 .featuredProject__projectName {
   margin: 2em 0 1em 0;
   font: bold clamp(20px, 7vw, 24px) "Ubuntu", sans-serif;
-  color: #64829A;
+  color: var(--font-color-secondary);
 }
 .featuredProject__imgContainer img {
   max-width: 100%;
@@ -337,7 +344,7 @@ main {
 .featuredProject__projectDesc {
   margin: 1em 0;
   font: 18px "Ubuntu", sans-serif;
-  color: var(--font-color);
+  color: var(--font-color-main);
 }
 .featuredProject__tagContainer {
   display: flex;
@@ -347,10 +354,10 @@ main {
   list-style-type: none;
   margin: 0.5em 0.5em 0.2em 0;
   padding: 0.25em 0.5em;
-  border: 1px solid #64829A;
+  border: 1px solid var(--font-color-secondary);
   border-radius: 5px;
   font: 18px "Inconsolata", sans-serif;
-  color: #64829A;
+  color: var(--font-color-secondary);
 }
 
 /* About Me */
@@ -371,7 +378,7 @@ main {
 }
 .about__bio {
   font: 18px "Ubuntu", sans-serif;
-  color: var(--font-color);
+  color: var(--font-color-main);
 }
 .about__bio p {
   margin: 1em 0;
@@ -382,7 +389,7 @@ main {
 .about__skillsContainer {
   margin: 1.5em 0;
   font: 18px "Inconsolata", sans-serif;
-  color: #64829A;
+  color: var(--font-color-secondary);
 }
 .about__title {
   font-weight: bold;
@@ -391,7 +398,7 @@ main {
   margin: 1em 0 0 1em;
 }
 
-/* Contact */
+/* === Contact === */
 .contact {
   display: grid;
   grid-template-rows: 90% 10%;
@@ -403,7 +410,7 @@ main {
 .contact__subtitle {
   margin-bottom: 1em;
   font: 18px "Ubuntu", sans-serif;
-  color: var(--font-color);
+  color: var(--font-color-main);
 }
 .contact__footer {
   display: block;
@@ -411,7 +418,7 @@ main {
 .contact__footerText {
   margin: 1em 0;
   font: 12px "Inconsolata", sans-serif;
-  color: #64829A;
+  color: var(--font-color-secondary);
 }
 
 /* MEDIA QUERIES */
@@ -425,6 +432,7 @@ main {
     padding: 0 7em;
   }
 
+  /* === Header === */
   .navContainer {
     display: flex;
     align-items: center;
@@ -455,16 +463,13 @@ main {
     margin: 0 0 0 2em;
   }
   .navContainer__linkList li a {
-    color: #64829A;
+    color: var(--font-color-secondary);
   }
   .navContainer__linkList li a:hover, .navContainer__linkList li a:focus {
     color: var(--cta);
   }
 
-  .contact {
-    grid-template-rows: 95% 5%;
-  }
-
+  /* === About === */
   .about__container {
     display: flex;
   }
@@ -473,11 +478,17 @@ main {
   }
   .about__skillsContainer {
     flex-basis: 50%;
-    margin: 1em 0 0 1em;
+    margin: 0 0 0 1.5em;
     justify-items: flex-end;
+  }
+
+  /* === Contact === */
+  .contact {
+    grid-template-rows: 95% 5%;
   }
 }
 @media screen and (min-width: 910px) {
+  /* === Featured Projects === */
   .featuredProject__projectContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -501,6 +512,7 @@ main {
     padding: 0 10em;
   }
 
+  /* === About === */
   .about__skillsContainer {
     margin-left: 3em;
   }

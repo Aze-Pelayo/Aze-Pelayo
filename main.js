@@ -20,17 +20,8 @@ const toggleDarkMode = () => {
     // }
 
     const onClick = () => {
-        toggler.checked ? darkMode() : lightMode();
+        document.body.classList.toggle("darkMode");
     };
 
-    const darkMode = () => {
-        document.body.classList.add("darkMode");
-        // img = changeImgSrc(img, 'd');
-    };
-
-    const lightMode = () => {
-        document.body.classList.remove("darkMode");
-        // img = changeImgSrc(img, 'l');
-    };
     toggler.addEventListener("click", onClick(), false);
 };
