@@ -214,6 +214,19 @@ body {
 .navContainer.expanded {
   top: 0vw;
 }
+.navContainer__toggler {
+  position: relative;
+}
+.navContainer__toggler label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFFEFA;
+  cursor: pointer;
+}
+.navContainer__toggler input[type=checkbox] {
+  display: none;
+}
 .navContainer__linkList {
   margin: 3em 2em;
   list-style-type: none;
@@ -391,10 +404,24 @@ main {
   }
 
   .navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     top: 0;
     padding: 2em 4em;
     filter: none;
     background-color: var(--background);
+  }
+  .navContainer__toggler {
+    margin-left: 2em;
+    position: static;
+    order: 3;
+  }
+  .navContainer__toggler label {
+    position: static;
+  }
+  .navContainer__toggler i {
+    color: var(--cta);
   }
   .navContainer__linkList {
     display: flex;

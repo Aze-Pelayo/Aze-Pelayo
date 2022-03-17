@@ -28,7 +28,13 @@
             </div>
 
             <nav class="navContainer">
-                <input type = "checkbox" class = "darkModeToggle" name = "checkbox" onclick = "toggleDarkMode()"/>
+                <div class="navContainer__toggler">
+                    <label for="darkModeToggle">
+                        <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
+                    </label>
+                    <input type = "checkbox" id = "darkModeToggle" class = "darkModeToggle" name = "checkbox" onclick = "toggleDarkMode()"/>
+                </div>
+
                 <ul class="navContainer__linkList">
                     <li>
                         <a href="#featuredProjects">Projects</a>
@@ -40,6 +46,7 @@
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
+                
                 <div class="cmp-externalLinks nav">
                     <a href="https://github.com/Aze-Pelayo" target="_blank">
                         <i class="fab fa-github fa-2x"></i>
@@ -82,7 +89,7 @@
                     <h3 class="featuredProject__projectName">Finance Tracker</h3>
                     <div class="featuredProject__imgContainer">
                         <a href="https://aze-pelayo.github.io/finance-tracker/" target = "_blank">
-                            <img src="./assets/finance-tracker-light-screenshot.png" alt="Picture of Finance Tracker project">
+                            <img src="./assets/finance-tracker-screenshot-l.png" alt="Picture of Finance Tracker project" id ="withDarkMode">
                         </a>
                     </div>
                     <div class="featuredProject__infoContainer">
