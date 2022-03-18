@@ -342,7 +342,7 @@ main {
   transition: all 0.5s ease;
 }
 .featuredProject__projectDesc {
-  margin: 1em 0;
+  margin: 2em 0;
   font: 18px "Ubuntu", sans-serif;
   color: var(--font-color-main);
 }
@@ -493,18 +493,19 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 10% 1fr;
+    grid-column-gap: 2em;
+    grid-template-areas: "title img" "info img";
   }
   .featuredProject__projectName {
     margin: 0;
-    grid-area: 1/1/2/2;
+    grid-area: title;
     align-self: center;
   }
   .featuredProject__imgContainer {
-    margin-left: 1.5em;
-    grid-area: 1/2/3/3;
+    grid-area: img;
   }
   .featuredProject__infoContainer {
-    grid-area: 2/1/3/2;
+    grid-area: info;
   }
 }
 @media screen and (min-width: 1024px) {
