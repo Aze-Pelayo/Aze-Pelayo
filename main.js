@@ -1,37 +1,56 @@
-const toggleMenu = (() => {
-	const burgerIcon = document.querySelector(".cmp-burgerIconContainer__icon");
-	const burgerIconContainer = document.querySelector(".cmp-burgerIconContainer");
-	const nav = document.querySelector(".navContainer");
+const burgerIcon = document.querySelector(".cmp-burgerIconContainer__icon");
+const burgerIconContainer = document.querySelector(".cmp-burgerIconContainer");
+const darkModeToggler = document.querySelector(".darkModeToggler");
+const nav = document.querySelector(".navContainer");
+const anchorLinks = document.querySelectorAll("a[href^='#']");
+const main = document.querySelector(".main");
 
-	burgerIcon.addEventListener("click", () => {
-		nav.classList.toggle("expanded");
-		burgerIconContainer.classList.toggle("expanded");
-	});
-})();
-
-const closeMenu = () => {
-	const nav = document.querySelector(".navContainer");
+const removeNavClass = () => {
 	if (nav.classList.contains("expanded")) {
-		const burgerIconContainer = document.querySelector(".cmp-burgerIconContainer");
-        nav.classList.remove("expanded");
-        burgerIconContainer.classList.remove("expanded");
-
+		nav.classList.remove("expanded");
+		burgerIconContainer.classList.remove("expanded");
 	}
 };
 
-const toggleDarkMode = () => {
-	const toggler = document.querySelector(".darkModeToggle");
-	// let img = document.getElementById("withDarkMode").src;
-
-	// const changeImgSrc = (src, mode) => {
-	//     const index = src.length - 5;
-	//     const newSrc = src.substring(0, index) + mode + src.substring(index+1);
-	//     return newSrc;
-	// }
-
-	const onClick = () => {
+// Toggle Dark Mode
+darkModeToggler.addEventListener(
+	"click",
+	() => {
 		document.body.classList.toggle("darkMode");
-	};
+	},
+	false
+);
 
-	toggler.addEventListener("click", onClick(), false);
-};
+// Toggle Burger Icon and Nav
+burgerIcon.addEventListener("click", () => {
+	nav.classList.toggle("expanded");
+	burgerIconContainer.classList.toggle("expanded");
+});
+
+// Close Nav
+main.addEventListener(
+	"click",
+	() => {
+		removeNavClass();
+	},
+	false
+);
+
+window.addEventListener(
+	"scroll",
+	() => {
+		removeNavClass();
+	},
+	false
+);
+
+// Smooth Scroll to anchor
+anchorLinks.forEach((link) => {
+	link.addEventListener("click", function (e) {
+		e.preventDefault();
+
+		document.querySelector(this.getAttribute("href")).scrollIntoView({
+			behavior: "smooth",
+		});
+	});
+});

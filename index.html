@@ -19,7 +19,7 @@
 
     <title>Azrielle Pelayo</title>
 </head>
-<body onscroll="closeMenu()">
+<body>
     <div class="root">
         <header class = "rootHeader">
             <!-- Hamburger Menu Icon-->
@@ -31,20 +31,20 @@
 
                 <!-- Dark Mode Toggler -->
                 <div class="navContainer__toggler">
-                    <button class="darkModeToggle" onclick="toggleDarkMode()" aria-label = "Toggle dark mode">
+                    <button class="darkModeToggler" aria-label = "Toggle dark mode">
                         <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
                     </button>
                 </div>
 
                 <ul class="navContainer__linkList">
                     <li>
-                        <a href="#featuredProjects">Projects</a>
+                        <a href="#featuredProjects" class = "link">Projects</a>
                     </li>
                     <li>
-                        <a href="#about-me">About Me</a>
+                        <a href="#about-me" class = "link">About Me</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact" class = "link">Contact</a>
                     </li>
                 </ul>
                 
@@ -60,8 +60,7 @@
             </nav>
         </header>
 
-        <main class = "main" onclick="closeMenu()">
-            <!-- <div class="wrapper" > -->
+        <main class = "main">
             <!-- Landing Page-->
             <section class = "landingPage">
                 <h1 class = "landingPage__header">
