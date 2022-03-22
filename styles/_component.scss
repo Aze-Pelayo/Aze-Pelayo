@@ -1,209 +1,211 @@
 /* == Burger Icon == */
 .cmp-burgerIconContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    height: 2em;
-    width: 2.5em;
-    z-index: 3;
-    padding: 0.2em;
-    border: none;
-    background: none;
-    cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	height: 2em;
+	width: 2.5em;
+	z-index: 3;
+	padding: 0.2em;
+	border: none;
+	background: none;
+	cursor: pointer;
 
-    // Burger Icon
-    &__icon,
-    &__icon:before,
-    &__icon:after {
-        width: 100%;
-        height: 3px;
-        background-color: var(--cta);
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-    }
+	// Burger Icon
+	&__icon,
+	&__icon:before,
+	&__icon:after {
+		width: 100%;
+		height: 3px;
+		background-color: var(--cta);
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
 
-    &__icon {
-        position: relative;
-    }
+	&__icon {
+		position: relative;
+	}
 
-    &__icon:before,
-    &__icon:after {
-        position: absolute;
-        content: "";
-        top: -10px;
-        left: 0;
-    }
+	&__icon:before,
+	&__icon:after {
+		position: absolute;
+		content: "";
+		top: -10px;
+		left: 0;
+	}
 
-    &__icon:after {
-        top: 10px;
-    }
-    // - Burger Icon
+	&__icon:after {
+		top: 10px;
+	}
+	// - Burger Icon
 
-    &.expanded & {
-        &__icon,
-        &__icon:before,
-        &__icon:after {
-            top: 0;
-            background-color: $cream-white;
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
+	&.expanded & {
+		&__icon,
+		&__icon:before,
+		&__icon:after {
+			top: 0;
+			background-color: $cream-white;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
 
-        &__icon {
-            background-color: transparent;
-        }
+		&__icon {
+			background-color: transparent;
+		}
 
-        &__icon:before {
-            transform: rotate(-45deg);
-        }
+		&__icon:before {
+			transform: rotate(-45deg);
+		}
 
-        &__icon:after {
-            transform: rotate(45deg);
-        }
-    }
+		&__icon:after {
+			transform: rotate(45deg);
+		}
+	}
 }
 
 /* == CTA == */
 .cmp-cta {
-    display: inline-block;
-    width: fit-content;
-    margin: 2em 0;
-    padding: 0.75em 0.5em;
-    border: 1px solid $blue-green;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    background: none;
-    font: $base $mono;
-    color: var(--cta);
+	display: inline-block;
+	width: fit-content;
+	margin: 2em 0;
+	padding: 0.75em 0.5em;
+	border: 1px solid $blue-green;
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+	background: none;
+	font: $base $mono;
+	color: var(--cta);
+	opacity: 0;
 
-    &:focus,
-    &:hover {
-        background-color: var(--cta);
-        color: $cream-white;
-        transition: all 0.5s ease;
-    }
+	&:focus,
+	&:hover {
+		background-color: var(--cta);
+		color: $cream-white;
+		transition: all 0.5s ease;
+	}
 
-    &:active {
-        background-color: var(--cta-washed);
-        transition: all 0.25s ease-in;
-    }
+	&:active {
+		background-color: var(--cta-washed);
+		transition: all 0.25s ease-in;
+	}
 }
 
 /* == External Links == */
 .cmp-externalLinks {
-    a {
-        text-decoration: none;
-        margin: 0.3em;
-        i {
-            color: var(--cta);
+	a {
+		text-decoration: none;
+		margin: 0.3em;
+		i {
+			color: var(--cta);
 
-            &:hover {
-                opacity: 0.8;
-                transition: all 0.25s ease;
-            }
-        }
-    }
+			&:hover {
+				opacity: 0.8;
+				transition: all 0.25s ease;
+			}
+		}
+	}
 
-    &.nav {
-        text-align: center;
-        a > i {
-            color: $cream-white;
-        }
-    }
+	&.nav {
+		text-align: center;
+		a > i {
+			color: $cream-white;
+		}
+	}
 
-    &.projects {
-        margin: 2em 0;
-    }
+	&.projects {
+		margin: 2em 0;
+	}
 
-    &.contactMe {
-        text-align: center;
-    }
+	&.contactMe {
+		text-align: center;
+	}
 
-    &.fixed {
-        display: none;
-    }
+	&.fixed {
+		display: none;
+	}
 }
 
 /* == Header == */
 .cmp-h2 {
-    width: 100%;
-    margin: 3em 0 2em 0;
-    overflow: hidden;
-    font: bold $h2 $header;
-    color: var(--font-color-main);
+	width: 100%;
+	margin: 3em 0 2em 0;
+	overflow: hidden;
+	font: bold $h2 $header;
+	color: var(--font-color-main);
 
-    &::after {
-        display: inline-block;
-        height: 0.5em;
-        width: 100%;
-        margin-left: 10px;
-        margin-right: -100%;
-        z-index: -1;
-        vertical-align: bottom;
-        content: "";
-        border-top: 0.5px solid $blue-green;
-    }
+	&::after {
+		display: inline-block;
+		height: 0.5em;
+		width: 100%;
+		margin-left: 10px;
+		margin-right: -100%;
+		z-index: -1;
+		vertical-align: bottom;
+		content: "";
+		border-top: 0.5px solid $blue-green;
+	}
 
-    &--contact {
-        margin: 3em 0 2em 0;
-        font: bold $h2 $header;
-        text-align: center;
-        color: var(--font-color-secondary);
-    }
+	&--contact {
+		margin: 3em 0 2em 0;
+		font: bold $h2 $header;
+		text-align: center;
+		color: var(--font-color-secondary);
+	}
 }
 
 /* == Media Queries == */
 @media screen and (min-width: 820px) {
-    /* == Burger Icon == */
-    .cmp-burgerIconContainer {
-        display: none;
-    }
+	/* == Burger Icon == */
+	.cmp-burgerIconContainer {
+		display: none;
+	}
 
-    /* == Header == */
-    .cmp-h2 {
-        &::after {
-            width: 30%;
-        }
-    }
+	/* == Header == */
+	.cmp-h2 {
+		&::after {
+			width: 30%;
+		}
+	}
 
-    /* == External Links == */
-    .cmp-externalLinks {
-        &.nav {
-            display: none;
-        }
+	/* == External Links == */
+	.cmp-externalLinks {
+		&.nav {
+			display: none;
+		}
 
-        &.contactMe {
-            display: none;
-        }
+		&.contactMe {
+			display: none;
+		}
 
-        &.fixed {
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            bottom: 0;
-            right: 2em;
+		&.fixed {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			bottom: 0;
+			right: 2em;
+			opacity: 0;
 
-            &::after {
-                display: inline-block;
-                height: 10.5em;
-                width: 100%;
-                margin: 0 0 0 -1.2em;
-                z-index: -1;
-                content: "";
-                border-right: 0.5px solid $blue-green;
-            }
+			&::after {
+				display: inline-block;
+				height: 10.5em;
+				width: 100%;
+				margin: 0 0 0 -1.2em;
+				z-index: -1;
+				content: "";
+				border-right: 0.5px solid $blue-green;
+			}
 
-            a {
-                margin-bottom: 1em;
-            }
-        }
-    }
+			a {
+				margin-bottom: 1em;
+			}
+		}
+	}
 }
