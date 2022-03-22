@@ -54,3 +54,39 @@ anchorLinks.forEach((link) => {
 		});
 	});
 });
+
+// Intersection Observer API for animation
+const toAnimateUp = document.querySelectorAll(".animate-up");
+const toAnimateRight = document.querySelector(".animate-right");
+const toAnimateFade = document.querySelectorAll(".animate-fade");
+
+const callback = (entries, observer) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			if (entry.target.classList.contains("animate-up")) {
+				entry.target.classList.add("translateUp");
+			} else if (entry.target.classList.contains("animate-right")) {
+				entry.target.classList.add("translateRight");
+			} else if (entry.target.classList.contains("animate-fade")) {
+				entry.target.classList.add("fadeIn");
+			}
+			observer.unobserve(entry.target);
+		}
+	});
+};
+
+const options = {
+	root: null,
+	rootMargin: "0px",
+	threshold: 0.1,
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+toAnimateUp.forEach((item) => {
+	observer.observe(item);
+});
+toAnimateFade.forEach((item) => {
+	observer.observe(item);
+});
+observer.observe(toAnimateRight);

@@ -84,6 +84,7 @@
   background: none;
   font: 18px "Inconsolata", sans-serif;
   color: var(--cta);
+  opacity: 0;
 }
 .cmp-cta:focus, .cmp-cta:hover {
   background-color: var(--cta);
@@ -174,6 +175,7 @@
     position: fixed;
     bottom: 0;
     right: 2em;
+    opacity: 0;
   }
   .cmp-externalLinks.fixed::after {
     display: inline-block;
@@ -290,6 +292,7 @@ main {
   margin: 1em 0;
   font: 18px "Ubuntu", sans-serif;
   color: var(--font-color-main);
+  opacity: 0;
 }
 .landingPage__subtitle--highlight {
   position: relative;
@@ -324,7 +327,7 @@ main {
   background-color: --background;
 }
 .featuredProject__projectContainer {
-  padding: 1em 0;
+  padding: 3em 0;
 }
 .featuredProject__projectName {
   margin: 2em 0 1em 0;
@@ -441,6 +444,7 @@ main {
     padding: 2em 4em;
     filter: none;
     background-color: var(--background);
+    opacity: 0;
   }
   .navContainer__toggler {
     margin-left: 2em;
@@ -469,22 +473,70 @@ main {
     color: var(--cta);
   }
 
-  /* === About === */
-  .about__container {
-    display: flex;
-  }
-  .about__bio {
-    flex-basis: 50%;
-  }
-  .about__skillsContainer {
-    flex-basis: 50%;
-    margin: 0 0 0 1.5em;
-    justify-items: flex-end;
-  }
-
   /* === Contact === */
   .contact {
     grid-template-rows: 95% 5%;
+  }
+
+  /* === Animation */
+  .translateUp {
+    animation: translateUp linear 0.5s;
+    -webkit-animation: translateUp linear 0.5s;
+    -moz-animation: translateUp linear 0.5s;
+    -o-animation: translateUp linear 0.5s;
+    -ms-animation: translateUp linear 0.5s;
+  }
+
+  .translateRight {
+    animation: translateRight linear 0.5s;
+    -webkit-animation: translateRight linear 0.5s;
+    -moz-animation: translateRight linear 0.2s;
+    -o-animation: translateRight linear 0.2s;
+    -ms-animation: translateRight linear 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  .fadeIn {
+    animation: fadeIn linear 0.5s;
+    -webkit-animation: fadeIn linear 0.5s;
+    -moz-animation: fadeIn linear 0.5s;
+    -o-animation: fadeIn linear 0.5s;
+    -ms-animation: fadeIn linear 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.75s;
+  }
+
+  @keyframes translateRight {
+    from {
+      transform: translate3d(-10%, 0, 0);
+      transform: translate3d(-10%, 0, 0);
+    }
+    to {
+      transform: translateZ(0);
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+  @keyframes translateUp {
+    0% {
+      transform: translate3d(0, 10%, 0);
+      opacity: 0;
+      transform: translate3d(0, 10%, 0);
+    }
+    to {
+      transform: translateZ(0);
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 @media screen and (min-width: 910px) {
@@ -506,6 +558,19 @@ main {
   }
   .featuredProject__infoContainer {
     grid-area: info;
+  }
+
+  /* === About === */
+  .about__container {
+    display: flex;
+  }
+  .about__bio {
+    flex-basis: 50%;
+  }
+  .about__skillsContainer {
+    flex-basis: 50%;
+    margin: 0 0 0 1.5em;
+    justify-items: flex-end;
   }
 }
 @media screen and (min-width: 1024px) {
