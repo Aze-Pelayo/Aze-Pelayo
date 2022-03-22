@@ -469,19 +469,6 @@ main {
     color: var(--cta);
   }
 
-  /* === About === */
-  .about__container {
-    display: flex;
-  }
-  .about__bio {
-    flex-basis: 50%;
-  }
-  .about__skillsContainer {
-    flex-basis: 50%;
-    margin: 0 0 0 1.5em;
-    justify-items: flex-end;
-  }
-
   /* === Contact === */
   .contact {
     grid-template-rows: 95% 5%;
@@ -506,6 +493,19 @@ main {
   }
   .featuredProject__infoContainer {
     grid-area: info;
+  }
+
+  /* === About === */
+  .about__container {
+    display: flex;
+  }
+  .about__bio {
+    flex-basis: 50%;
+  }
+  .about__skillsContainer {
+    flex-basis: 50%;
+    margin: 0 0 0 1.5em;
+    justify-items: flex-end;
   }
 }
 @media screen and (min-width: 1024px) {

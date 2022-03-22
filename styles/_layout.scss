@@ -325,23 +325,6 @@ main {
         }
     }
 
-	/* === About === */ 
-	.about {
-        &__container {
-            display: flex;
-        }
-
-        &__bio {
-            flex-basis: 50%;
-        }
-
-        &__skillsContainer {
-            flex-basis: 50%;
-            margin: 0 0 0 1.5em;
-            justify-items: flex-end;
-        }
-    }
-
 	/* === Contact === */
     .contact {
         grid-template-rows: 95% 5%;
@@ -373,6 +356,23 @@ main {
 
         &__infoContainer {
             grid-area: info
+        }
+    }
+
+    /* === About === */ 
+	.about {
+        &__container {
+            display: flex;
+        }
+
+        &__bio {
+            flex-basis: 50%;
+        }
+
+        &__skillsContainer {
+            flex-basis: 50%;
+            margin: 0 0 0 1.5em;
+            justify-items: flex-end;
         }
     }
 }
