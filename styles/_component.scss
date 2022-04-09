@@ -83,7 +83,6 @@
 	background: none;
 	font: $base $mono;
 	color: var(--cta);
-	opacity: 0;
 
 	&:focus,
 	&:hover {
@@ -173,6 +172,11 @@
 		&::after {
 			width: 30%;
 		}
+	}
+
+	/* == CTA == */
+	.cmp-cta {
+		opacity: 0;
 	}
 
 	/* == External Links == */

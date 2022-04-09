@@ -112,7 +112,6 @@ main {
 		margin: 1em 0;
 		font: $base $body;
 		color: var(--font-color-main);
-		opacity: 0;
 
 		&--highlight {
 			position: relative;
@@ -324,6 +323,12 @@ main {
 					}
 				}
 			}
+		}
+	}
+	/* === Landing Page === */
+	.landingPage {
+		&__subtitle {
+			opacity: 0;
 		}
 	}
 
