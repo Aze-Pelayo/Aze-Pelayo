@@ -84,7 +84,6 @@
   background: none;
   font: 18px "Inconsolata", sans-serif;
   color: var(--cta);
-  opacity: 0;
 }
 .cmp-cta:focus, .cmp-cta:hover {
   background-color: var(--cta);
@@ -160,6 +159,11 @@
   /* == Header == */
   .cmp-h2::after {
     width: 30%;
+  }
+
+  /* == CTA == */
+  .cmp-cta {
+    opacity: 0;
   }
 
   /* == External Links == */
@@ -292,7 +296,6 @@ main {
   margin: 1em 0;
   font: 18px "Ubuntu", sans-serif;
   color: var(--font-color-main);
-  opacity: 0;
 }
 .landingPage__subtitle--highlight {
   position: relative;
@@ -471,6 +474,11 @@ main {
   }
   .navContainer__linkList li a:hover, .navContainer__linkList li a:focus {
     color: var(--cta);
+  }
+
+  /* === Landing Page === */
+  .landingPage__subtitle {
+    opacity: 0;
   }
 
   /* === Contact === */
