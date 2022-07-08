@@ -122,6 +122,13 @@
 .cmp-externalLinks.fixed {
   display: none;
 }
+.cmp-externalLinks.link {
+  text-decoration: none;
+  color: var(--cta);
+}
+.cmp-externalLinks.link:hover {
+  opacity: 0.8;
+}
 
 /* == Header == */
 .cmp-h2 {
