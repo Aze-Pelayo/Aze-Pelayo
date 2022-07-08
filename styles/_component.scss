@@ -130,6 +130,15 @@
 	&.fixed {
 		display: none;
 	}
+
+	&.link {
+		text-decoration: none;
+		color: var(--cta);
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }
 
 /* == Header == */
